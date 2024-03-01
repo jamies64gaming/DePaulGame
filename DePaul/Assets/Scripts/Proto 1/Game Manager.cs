@@ -26,4 +26,9 @@ public class GameManager : MonoBehaviour
     {
         donationValue += value;
     }
+    
+    public void SpendDono(int value)
+    {
+        donationValue -= value;
+    }
 }

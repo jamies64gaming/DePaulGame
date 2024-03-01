@@ -1,0 +1,137 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void NarrativeController_Start_m7A709503A7145F0F4D72DE0BB526E1D7136223E4 (void);
+extern void NarrativeController_Update_mD1AFFF2C8146E1B50779F54EB3015A530FA4A237 (void);
+extern void NarrativeController_NextLine_mB77CF91006FDA2E9DC59E5B1078547E5F66D372F (void);
+extern void NarrativeController_PreviousLine_m5A8B84FFD8796D2FD0F7F11F253D8604843317CE (void);
+extern void NarrativeController_CheckNextButton_mDFA9DF1A3E385669698429C6AD059153D56117CA (void);
+extern void NarrativeController_CheckPrevButton_m97D760A64A1FC5E4BA3D924BAC2CF09445A5A24F (void);
+extern void NarrativeController_DeactivateText_mA69129DEC223178F131FBBD061BA06061B4EDF97 (void);
+extern void NarrativeController_ActivateText_m184582276E57C18EBD829295CE45E8ADD3E1263F (void);
+extern void NarrativeController__ctor_m56A5A224331DCFBB92580C8CA2E28735D1FD9B5C (void);
+extern void GameManager_Start_m87A71D65F3171A58DBDDBFB03832ADA65643D0E2 (void);
+extern void GameManager_Update_m7F29D8E933B8D21D2E67507979C0F12ACF87BB41 (void);
+extern void GameManager_AddDono_m7D79F9BE4824EA2538ED441C63600B1BFECDE4E0 (void);
+extern void GameManager_SpendDono_m6AF54F2391591F0F04BC9150DB23C76537569EE4 (void);
+extern void GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368 (void);
+extern void StandController_Awake_m83D7CDE16B2E3292C273724D56132190F89AC727 (void);
+extern void StandController_Update_mB8425A0FFA917CCBB26A691688BC556D47857694 (void);
+extern void StandController_CanClick_m69DE47920F8FF68741B0F40D46F7780A64F0245A (void);
+extern void StandController_OnMouseDown_m1A0CAFB35CDD482A0A0985AC7171C1BB8E2A4493 (void);
+extern void StandController_StartCollection_mC757BD9B0961B7A36322182226070FF4AE5EAB9C (void);
+extern void StandController_UpdateSlider_mCEF1FB673ED091EC7AEDD6A043A6FCF7D784A116 (void);
+extern void StandController_AutoClick_m7E74844596395247A7012BD4D0D0E30E1EDAB234 (void);
+extern void StandController__ctor_m8824C02ABCEADDBDD3D3420CA62C9621EAA07D9D (void);
+extern void U3CStartCollectionU3Ed__15__ctor_m6038C2B13F0658FE1F1D6B578CD6B69C2067DF0E (void);
+extern void U3CStartCollectionU3Ed__15_System_IDisposable_Dispose_m5CF97792FA5041838DDE0DCCCA7355B2A6A082C9 (void);
+extern void U3CStartCollectionU3Ed__15_MoveNext_mF9A990B270B320E2CB10051808D513242EBA01EC (void);
+extern void U3CStartCollectionU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m574EC6272532A55ED2C0EE19EEC62DDB9A6A9E1A (void);
+extern void U3CStartCollectionU3Ed__15_System_Collections_IEnumerator_Reset_m411AC9BAC33A793E50C9F5B697F5B480DBF8FC9D (void);
+extern void U3CStartCollectionU3Ed__15_System_Collections_IEnumerator_get_Current_mD0508F70EC172885DB118F0E6A229313D2C36EDC (void);
+extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
+extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[32] = 
+{
+	NarrativeController_Start_m7A709503A7145F0F4D72DE0BB526E1D7136223E4,
+	NarrativeController_Update_mD1AFFF2C8146E1B50779F54EB3015A530FA4A237,
+	NarrativeController_NextLine_mB77CF91006FDA2E9DC59E5B1078547E5F66D372F,
+	NarrativeController_PreviousLine_m5A8B84FFD8796D2FD0F7F11F253D8604843317CE,
+	NarrativeController_CheckNextButton_mDFA9DF1A3E385669698429C6AD059153D56117CA,
+	NarrativeController_CheckPrevButton_m97D760A64A1FC5E4BA3D924BAC2CF09445A5A24F,
+	NarrativeController_DeactivateText_mA69129DEC223178F131FBBD061BA06061B4EDF97,
+	NarrativeController_ActivateText_m184582276E57C18EBD829295CE45E8ADD3E1263F,
+	NarrativeController__ctor_m56A5A224331DCFBB92580C8CA2E28735D1FD9B5C,
+	GameManager_Start_m87A71D65F3171A58DBDDBFB03832ADA65643D0E2,
+	GameManager_Update_m7F29D8E933B8D21D2E67507979C0F12ACF87BB41,
+	GameManager_AddDono_m7D79F9BE4824EA2538ED441C63600B1BFECDE4E0,
+	GameManager_SpendDono_m6AF54F2391591F0F04BC9150DB23C76537569EE4,
+	GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368,
+	StandController_Awake_m83D7CDE16B2E3292C273724D56132190F89AC727,
+	StandController_Update_mB8425A0FFA917CCBB26A691688BC556D47857694,
+	StandController_CanClick_m69DE47920F8FF68741B0F40D46F7780A64F0245A,
+	StandController_OnMouseDown_m1A0CAFB35CDD482A0A0985AC7171C1BB8E2A4493,
+	StandController_StartCollection_mC757BD9B0961B7A36322182226070FF4AE5EAB9C,
+	StandController_UpdateSlider_mCEF1FB673ED091EC7AEDD6A043A6FCF7D784A116,
+	StandController_AutoClick_m7E74844596395247A7012BD4D0D0E30E1EDAB234,
+	StandController__ctor_m8824C02ABCEADDBDD3D3420CA62C9621EAA07D9D,
+	U3CStartCollectionU3Ed__15__ctor_m6038C2B13F0658FE1F1D6B578CD6B69C2067DF0E,
+	U3CStartCollectionU3Ed__15_System_IDisposable_Dispose_m5CF97792FA5041838DDE0DCCCA7355B2A6A082C9,
+	U3CStartCollectionU3Ed__15_MoveNext_mF9A990B270B320E2CB10051808D513242EBA01EC,
+	U3CStartCollectionU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m574EC6272532A55ED2C0EE19EEC62DDB9A6A9E1A,
+	U3CStartCollectionU3Ed__15_System_Collections_IEnumerator_Reset_m411AC9BAC33A793E50C9F5B697F5B480DBF8FC9D,
+	U3CStartCollectionU3Ed__15_System_Collections_IEnumerator_get_Current_mD0508F70EC172885DB118F0E6A229313D2C36EDC,
+	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
+	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[32] = 
+{
+	7331,
+	7331,
+	7331,
+	7331,
+	7331,
+	7331,
+	7331,
+	7331,
+	7331,
+	7331,
+	7331,
+	5713,
+	5713,
+	7331,
+	7331,
+	7331,
+	7331,
+	7331,
+	7196,
+	7331,
+	7331,
+	7331,
+	5713,
+	7331,
+	7081,
+	7196,
+	7331,
+	7196,
+	7331,
+	7331,
+	11302,
+	7331,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	32,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

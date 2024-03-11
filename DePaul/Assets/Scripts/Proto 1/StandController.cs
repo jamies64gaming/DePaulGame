@@ -57,7 +57,7 @@ public class StandController : MonoBehaviour
     void OnMouseDown()
     {
         if (clickable && active)
-            StartCoroutine(StartCollection());
+            StartCollection();
 
         if (!active && GM.donationValue >= cost)
         {
@@ -67,13 +67,14 @@ public class StandController : MonoBehaviour
             GM.SpendDono(cost);
 
             info.text = "speed" + cooldownTime.ToString() + "\nValue:" + value.ToString();
+            StartCollection();
+            GM.SpendDono(value);
         }
     }
 
-    IEnumerator StartCollection()
+    void StartCollection()
     {
         lastUsedTime = Time.time;
-        yield return new WaitForSeconds(cooldownTime);
         GM.AddDono(value);
     }
 
@@ -83,7 +84,7 @@ public class StandController : MonoBehaviour
             slider.value = (Time.time-lastUsedTime)/cooldownTime;
         if (clickable)
         {
-            slider.value = 0;
+            slider.value = 1;
         }
     }
 
@@ -91,7 +92,7 @@ public class StandController : MonoBehaviour
     {
         if (autoClick && clickable && active)
         {
-            StartCoroutine(StartCollection());
+            StartCollection();
         }   
     }
 }

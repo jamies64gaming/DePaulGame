@@ -1,20 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - AudioManager
     - GameManager
     - ManagerController
     - NarrativeController
     - PauseMenu
+    - Readme
+    - ServiceManager
     - SettingsManager
     - StandController
     Unity.InputSystem.dll:
-    - UnityEngine.InputSystem.InputActionAsset
-    - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
-    - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -112,12 +110,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Toggle
   serializedClasses:
-    Unity.InputSystem:
-    - UnityEngine.InputSystem.InputAction
-    - UnityEngine.InputSystem.InputActionMap
-    - UnityEngine.InputSystem.InputBinding
-    - UnityEngine.InputSystem.InputControlScheme
-    - UnityEngine.InputSystem.InputControlScheme/DeviceRequirement
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.BoolParameter
     - UnityEngine.Rendering.ClampedFloatParameter
@@ -190,78 +182,6 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: SettingsManager
-    methodName: SetSFXVolume
-  - assembly: Assembly-CSharp
-    fullTypeName: SettingsManager
-    methodName: SetMusicVolume
-  - assembly: Assembly-CSharp
-    fullTypeName: SettingsManager
-    methodName: SetQuality
-  - assembly: Assembly-CSharp
-    fullTypeName: SettingsManager
-    methodName: SetFullScreen
-  - assembly: Assembly-CSharp
-    fullTypeName: SettingsManager
-    methodName: SetResolution
-  - assembly: Assembly-CSharp
-    fullTypeName: SettingsManager
-    methodName: QuitGame
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: SettingsManager
-    methodName: LoadScene
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
-    methodName: OnScrollbarClicked
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
-    methodName: OnScrollbarClicked
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
-    methodName: ResetDebugManager
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -316,6 +236,45 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ManagerController
     methodName: activate
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
+    methodName: OnScrollbarClicked
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
+    methodName: OnScrollbarClicked
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
+    methodName: ResetDebugManager
   sceneClasses:
     Assets/Scenes/DO NOT TOUCH/Main.unity:
     - Class: 1
@@ -336,6 +295,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
@@ -351,25 +312,61 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16838}
     - Class: 114
+      Script: {instanceID: 16840}
+    - Class: 114
       Script: {instanceID: 16842}
     - Class: 114
       Script: {instanceID: 16844}
     - Class: 114
-      Script: {instanceID: 16918}
+      Script: {instanceID: 16846}
     - Class: 114
-      Script: {instanceID: 18600}
+      Script: {instanceID: 16852}
     - Class: 114
-      Script: {instanceID: 18616}
+      Script: {instanceID: 16920}
     - Class: 114
-      Script: {instanceID: 18926}
+      Script: {instanceID: 17112}
     - Class: 114
-      Script: {instanceID: 19534}
+      Script: {instanceID: 17712}
     - Class: 114
-      Script: {instanceID: 20494}
+      Script: {instanceID: 17852}
+    - Class: 114
+      Script: {instanceID: 17958}
+    - Class: 114
+      Script: {instanceID: 18100}
+    - Class: 114
+      Script: {instanceID: 18232}
+    - Class: 114
+      Script: {instanceID: 18602}
+    - Class: 114
+      Script: {instanceID: 18618}
+    - Class: 114
+      Script: {instanceID: 18768}
+    - Class: 114
+      Script: {instanceID: 18928}
+    - Class: 114
+      Script: {instanceID: 19536}
+    - Class: 114
+      Script: {instanceID: 19656}
+    - Class: 114
+      Script: {instanceID: 19792}
+    - Class: 114
+      Script: {instanceID: 20034}
+    - Class: 114
+      Script: {instanceID: 20086}
+    - Class: 114
+      Script: {instanceID: 20194}
     - Class: 114
       Script: {instanceID: 20662}
     - Class: 114
+      Script: {instanceID: 20836}
+    - Class: 114
+      Script: {instanceID: 21042}
+    - Class: 114
       Script: {instanceID: 21092}
+    - Class: 114
+      Script: {instanceID: 21306}
+    - Class: 114
+      Script: {instanceID: 21454}
     - Class: 114
       Script: {instanceID: 21680}
     - Class: 114
@@ -379,140 +376,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22250}
     - Class: 114
-      Script: {instanceID: 22396}
-    - Class: 114
-      Script: {instanceID: 22408}
-    - Class: 114
-      Script: {instanceID: 22502}
-    - Class: 114
-      Script: {instanceID: 22630}
-    - Class: 114
-      Script: {instanceID: 23798}
-    - Class: 114
-      Script: {instanceID: 24318}
-    - Class: 114
-      Script: {instanceID: 24336}
-    - Class: 114
-      Script: {instanceID: 24734}
-    - Class: 114
-      Script: {instanceID: 25650}
-    - Class: 114
-      Script: {instanceID: 25906}
-    - Class: 114
-      Script: {instanceID: 26486}
-    - Class: 114
-      Script: {instanceID: 26702}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 241
-      Script: {instanceID: 0}
-    - Class: 243
-      Script: {instanceID: 0}
-    - Class: 245
-      Script: {instanceID: 0}
-    Assets/Scenes/MainMenu.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 16836}
-    - Class: 114
-      Script: {instanceID: 16838}
-    - Class: 114
-      Script: {instanceID: 16840}
-    - Class: 114
-      Script: {instanceID: 16842}
-    - Class: 114
-      Script: {instanceID: 16844}
-    - Class: 114
-      Script: {instanceID: 16850}
-    - Class: 114
-      Script: {instanceID: 16918}
-    - Class: 114
-      Script: {instanceID: 17110}
-    - Class: 114
-      Script: {instanceID: 17710}
-    - Class: 114
-      Script: {instanceID: 17850}
-    - Class: 114
-      Script: {instanceID: 17956}
-    - Class: 114
-      Script: {instanceID: 18098}
-    - Class: 114
-      Script: {instanceID: 18230}
-    - Class: 114
-      Script: {instanceID: 18600}
-    - Class: 114
-      Script: {instanceID: 18616}
-    - Class: 114
-      Script: {instanceID: 18766}
-    - Class: 114
-      Script: {instanceID: 18926}
-    - Class: 114
-      Script: {instanceID: 19534}
-    - Class: 114
-      Script: {instanceID: 19654}
-    - Class: 114
-      Script: {instanceID: 19790}
-    - Class: 114
-      Script: {instanceID: 20032}
-    - Class: 114
-      Script: {instanceID: 20084}
-    - Class: 114
-      Script: {instanceID: 20192}
-    - Class: 114
-      Script: {instanceID: 20400}
-    - Class: 114
-      Script: {instanceID: 20662}
-    - Class: 114
-      Script: {instanceID: 20836}
-    - Class: 114
-      Script: {instanceID: 21042}
-    - Class: 114
-      Script: {instanceID: 21306}
-    - Class: 114
-      Script: {instanceID: 21454}
-    - Class: 114
-      Script: {instanceID: 21468}
-    - Class: 114
-      Script: {instanceID: 21810}
-    - Class: 114
       Script: {instanceID: 22328}
+    - Class: 114
+      Script: {instanceID: 22396}
     - Class: 114
       Script: {instanceID: 22408}
     - Class: 114
@@ -526,51 +392,61 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22640}
     - Class: 114
-      Script: {instanceID: 22938}
+      Script: {instanceID: 22876}
     - Class: 114
-      Script: {instanceID: 22942}
+      Script: {instanceID: 22940}
     - Class: 114
-      Script: {instanceID: 22968}
+      Script: {instanceID: 22944}
     - Class: 114
-      Script: {instanceID: 23374}
+      Script: {instanceID: 22970}
     - Class: 114
-      Script: {instanceID: 23782}
+      Script: {instanceID: 23376}
     - Class: 114
-      Script: {instanceID: 23798}
+      Script: {instanceID: 23784}
     - Class: 114
-      Script: {instanceID: 23902}
+      Script: {instanceID: 23800}
     - Class: 114
-      Script: {instanceID: 23908}
+      Script: {instanceID: 23904}
     - Class: 114
-      Script: {instanceID: 24086}
+      Script: {instanceID: 23910}
     - Class: 114
-      Script: {instanceID: 24140}
+      Script: {instanceID: 24088}
     - Class: 114
-      Script: {instanceID: 24216}
+      Script: {instanceID: 24142}
     - Class: 114
-      Script: {instanceID: 24336}
+      Script: {instanceID: 24218}
     - Class: 114
-      Script: {instanceID: 24492}
+      Script: {instanceID: 24320}
     - Class: 114
-      Script: {instanceID: 24714}
+      Script: {instanceID: 24338}
     - Class: 114
-      Script: {instanceID: 24898}
+      Script: {instanceID: 24494}
     - Class: 114
-      Script: {instanceID: 24920}
+      Script: {instanceID: 24716}
     - Class: 114
-      Script: {instanceID: 24958}
+      Script: {instanceID: 24736}
     - Class: 114
-      Script: {instanceID: 24998}
+      Script: {instanceID: 24900}
     - Class: 114
-      Script: {instanceID: 25458}
+      Script: {instanceID: 24960}
+    - Class: 114
+      Script: {instanceID: 25000}
+    - Class: 114
+      Script: {instanceID: 25460}
     - Class: 114
       Script: {instanceID: 25906}
     - Class: 114
-      Script: {instanceID: 25970}
-    - Class: 114
       Script: {instanceID: 26464}
     - Class: 114
+      Script: {instanceID: 26486}
+    - Class: 114
+      Script: {instanceID: 26702}
+    - Class: 114
       Script: {instanceID: 26886}
+    - Class: 114
+      Script: {instanceID: 27258}
+    - Class: 114
+      Script: {instanceID: 27262}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1166,12 +1042,6 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: de36711d389708e100d9ac5939cd36b5
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
       Hash: 552dca338f20933ce362ebbe559a6aa6
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1560,6 +1430,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: ChannelMixer
+  - hash:
+      serializedVersion: 2
+      Hash: 9ebe11bcc89724935602b7de957802d4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ServiceManager
   - hash:
       serializedVersion: 2
       Hash: 3e1ba87a30ba656beab510dc2fa7cdc3
@@ -1988,12 +1864,6 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 0af1ba8be3fe1535a945ca4485cd8fe8
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: StandController
-  - hash:
-      serializedVersion: 2
       Hash: 67272c9c30c50b68ef1ce72ac0191c57
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -2178,8 +2048,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 19941dc6928a7a9fa09eb0ec90422b27
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StandController
+  - hash:
+      serializedVersion: 2
+      Hash: 948398dbc914804a370faa765878fd6c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameManager
   platform: 20
   scenePathNames:
-  - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/DO NOT TOUCH/Main.unity
-  playerPath: F:/Game Design/Unity projects/DePaul Git/DePaulGame/DePaul/build/v.0.1.1
+  playerPath: F:/Game Design/Unity projects/DePaul Git/DePaulGame/DePaul/build/v0.1.2

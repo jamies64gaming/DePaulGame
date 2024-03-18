@@ -36,8 +36,7 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -51,8 +50,7 @@
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -66,8 +64,7 @@
           {
             "name": "AudioMixer",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -75,8 +72,7 @@
           {
             "name": "AudioMixerGroup",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -84,17 +80,14 @@
           {
             "name": "AudioMixerSnapshot",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AudioSource",
-            "scenes": [
-              "Assets/Scenes/MainMenu.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -124,8 +117,7 @@
           {
             "name": "Camera",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -145,8 +137,7 @@
           {
             "name": "Cubemap",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -166,8 +157,7 @@
           {
             "name": "EditorExtension",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -181,8 +171,7 @@
           {
             "name": "GameObject",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -208,8 +197,7 @@
           {
             "name": "LevelGameManager",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -217,8 +205,7 @@
           {
             "name": "Light",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -238,8 +225,7 @@
           {
             "name": "LightmapSettings",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -253,8 +239,7 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -286,8 +271,7 @@
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -301,8 +285,7 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -310,8 +293,7 @@
           {
             "name": "NamedObject",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -343,8 +325,7 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -358,8 +339,7 @@
           {
             "name": "RenderSettings",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -391,8 +371,7 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -418,8 +397,7 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -935,8 +913,7 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -979,8 +956,7 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -994,8 +970,7 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/Scenes/DO NOT TOUCH/Main.unity",
-              "Assets/Scenes/MainMenu.unity"
+              "Assets/Scenes/DO NOT TOUCH/Main.unity"
             ],
             "dependencyType": 0,
             "icon": null

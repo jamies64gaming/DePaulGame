@@ -1,26 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class UIPanelController : MonoBehaviour
+public class UI : MonoBehaviour
 {
-    public Animator animator;
-    public bool slideIn = false; // Assuming this is your boolean variable controlling the panel animation
+    private Animator Anim;
 
+    private bool active = false;
     // Start is called before the first frame update
     void Start()
     {
-        // Ensure the animator component is assigned
-        if (animator == null)
-        {
-            animator = GetComponent<Animator>();
-        }
+        Anim = GetComponent<Animator>();
     }
 
-    // Function to toggle the panel animation
-    public void TogglePanel()
+    public void Toggle()
     {
-        // Toggle the slideIn boolean
-        slideIn = !slideIn;
-        // Set the "SlideIn" parameter in the animator
-        animator.SetBool("SlideIn", slideIn);
+        if (active)
+        {
+            active = false;
+            Anim.SetBool("SlideIn",false);
+        }
+        else
+        {
+            active = true;
+            Anim.SetBool("SlideIn",true);
+        }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

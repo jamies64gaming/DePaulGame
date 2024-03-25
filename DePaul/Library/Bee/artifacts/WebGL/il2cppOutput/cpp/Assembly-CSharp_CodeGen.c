@@ -103,11 +103,15 @@ extern void SettingsManager_LoadVolume_m937438190F4CC6B1E7749FA7CC1D344247D00928
 extern void SettingsManager_LoadScene_m1C3743AD063A567C5D8DEE7AC4EF85D7DE7A9190 (void);
 extern void SettingsManager_QuitGame_m1DA2599228103767AA2ADE4884D96332DF6C0A04 (void);
 extern void SettingsManager__ctor_m3F050F09698FD9788C28F8F171CA891F45BC4D10 (void);
+extern void UI_Start_m36F3E11677AB5677BD3A76B5865E90CD3609183A (void);
+extern void UI_Toggle_m4519101BCBB2034537834449F2CBBBAB0A5EBEF6 (void);
+extern void UI_Update_m7F9212980C571870E0700BAB400E09111370F6ED (void);
+extern void UI__ctor_m177FCA8E7C6A148BFF6FED9F758B3396F25FDFBB (void);
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[96] = 
+static Il2CppMethodPointer s_methodPointers[100] = 
 {
 	ManagerController_Start_mD0FC571232EA7AD0277B3CBEA83E09F17D8DC7C2,
 	ManagerController_activate_m99AAB3E061A38D0E115925615F7F8FBA5D4D18AB,
@@ -201,6 +205,10 @@ static Il2CppMethodPointer s_methodPointers[96] =
 	SettingsManager_LoadScene_m1C3743AD063A567C5D8DEE7AC4EF85D7DE7A9190,
 	SettingsManager_QuitGame_m1DA2599228103767AA2ADE4884D96332DF6C0A04,
 	SettingsManager__ctor_m3F050F09698FD9788C28F8F171CA891F45BC4D10,
+	UI_Start_m36F3E11677AB5677BD3A76B5865E90CD3609183A,
+	UI_Toggle_m4519101BCBB2034537834449F2CBBBAB0A5EBEF6,
+	UI_Update_m7F9212980C571870E0700BAB400E09111370F6ED,
+	UI__ctor_m177FCA8E7C6A148BFF6FED9F758B3396F25FDFBB,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
@@ -229,7 +237,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[10] =
 	{ 0x06000050, MenuActions_RemoveCallbacks_m55966ECA0242F84251EA89C3A69D170BAE061C8C_AdjustorThunk },
 	{ 0x06000051, MenuActions_SetCallbacks_mFE6FDAD7BF02AB26AF8EDB28B10D85E4B8897BAE_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[96] = 
+static const int32_t s_InvokerIndices[100] = 
 {
 	7338,
 	7338,
@@ -325,6 +333,10 @@ static const int32_t s_InvokerIndices[96] =
 	7338,
 	7338,
 	7338,
+	7338,
+	7338,
+	7338,
+	7338,
 	11321,
 	7338,
 };
@@ -332,7 +344,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	96,
+	100,
 	s_methodPointers,
 	10,
 	s_adjustorThunks,

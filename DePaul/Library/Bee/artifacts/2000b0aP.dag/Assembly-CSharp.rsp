@@ -311,6 +311,7 @@
 "Assets/Scripts/UI/PauseMenu.cs"
 "Assets/Scripts/UI/PlayerInput.cs"
 "Assets/Scripts/UI/SettingsManager.cs"
+"Assets/Scripts/UI/UIPanelController.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 

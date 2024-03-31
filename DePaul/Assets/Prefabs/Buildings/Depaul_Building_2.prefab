@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8823994391478282587}
   - component: {fileID: 225811622664904898}
   m_Layer: 0
-  m_Name: Depaul_Building_2
+  m_Name: Depaul_Building_2_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

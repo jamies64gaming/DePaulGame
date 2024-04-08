@@ -67,7 +67,7 @@ public class ServiceManager : MonoBehaviour
         {
             active = true;
             slider.gameObject.SetActive(true);
-            transform.GetChild(0).GetComponent<MeshRenderer>().material = activeMat;
+            transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = activeMat;
             GM.SpendDono(cost);
 
             info.text = name + "\nspeed" + cooldownTime.ToString() + "\nValue:" + value.ToString()

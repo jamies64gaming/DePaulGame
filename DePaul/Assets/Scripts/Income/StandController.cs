@@ -28,6 +28,8 @@ public class StandController : MonoBehaviour
     
     private GameManager GM;
     private Slider slider;
+
+    private ManagerCommunication AutoClickCheck;
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,6 +39,7 @@ public class StandController : MonoBehaviour
         slider.gameObject.SetActive(false);
         info = transform.GetChild(1).Find("Info").GetComponent<TMP_Text>();
         info.text = name + "\nCost: " + cost.ToString();
+        AutoClickCheck = GetComponent<ManagerCommunication>();
     }
 
     // Update is called once per frame
@@ -66,7 +69,7 @@ public class StandController : MonoBehaviour
         {
             active = true;
             slider.gameObject.SetActive(true);
-            transform.GetChild(0).GetComponent<MeshRenderer>().material = activeMat;
+            transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = activeMat;
             GM.SpendDono(cost);
 
             info.text = name + "\nspeed" + cooldownTime.ToString() + "\nValue:" + value.ToString();
@@ -92,9 +95,14 @@ public class StandController : MonoBehaviour
 
     void AutoClick()
     {
-        if (autoClick && clickable && active)
+        if (autoClick && clickable)
         {
             StartCollection();
-        }   
+        }
+        else if(!autoClick)
+        {
+            if (AutoClickCheck.Active)
+                autoClick = true;
+        }
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine.PlayerLoop;
 
 public class CameraManager : MonoBehaviour
 {
+    [Header("reference game manager to allign stages")]
     public int[] zoomStages;
     public float speed;
     public float zoomLevel;
@@ -45,16 +46,17 @@ public class CameraManager : MonoBehaviour
         
         if (Input.GetKeyDown("space"))
         {
-            SwitchStage(stage++);
+            SwitchStage(stage+1);
         }
     }
     
-    public void SwitchStage(int stage)
+    public void SwitchStage(int stg)
     {
-        if (stage >= zoomStages.Length)
+        if (stg >= zoomStages.Length)
             return;
         else
         {
+            stage = stg;
             sinTime = 0;
             currentZoom = targetZoom;
             targetZoom = zoomStages[stage];

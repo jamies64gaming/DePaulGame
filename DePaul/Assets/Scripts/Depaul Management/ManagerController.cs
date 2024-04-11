@@ -29,6 +29,8 @@ public class ManagerController : MonoBehaviour
 
     private GameObject[] stands;
     private GameManager GM;
+
+    private ExternalCommunication EC;
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,6 +39,7 @@ public class ManagerController : MonoBehaviour
         info.text = name + "\nCost: " + cost.ToString();
         
         stands = GameObject.FindGameObjectsWithTag(standType);
+        EC = GetComponent<ExternalCommunication>();
                 
     }
 
@@ -45,11 +48,7 @@ public class ManagerController : MonoBehaviour
 
         if (!active && GM.donationValue >= cost)
         {
-            active = true;
-            GM.SpendDono(cost);
-
-            info.text = name + "is active";
-            activate();
+            Buy();
         }
     }
     
@@ -57,8 +56,18 @@ public class ManagerController : MonoBehaviour
     {
         foreach (GameObject stand in stands)
         {
-            stand.GetComponent<ManagerCommunication>().Active = true;
+            stand.GetComponent<ExternalCommunication>().AutoClickActive = true;
         }
         
+    }
+
+    void Buy()
+    {
+        active = true;
+        EC.active = active;
+        GM.SpendDono(cost);
+
+        info.text = name + "is active";
+        activate();
     }
 }

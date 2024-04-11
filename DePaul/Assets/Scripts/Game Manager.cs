@@ -6,6 +6,9 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    
+    
+    
     public int donationValue = 0;
     public string donationPreText = "";
     

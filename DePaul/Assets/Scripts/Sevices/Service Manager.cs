@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,6 +30,7 @@ public class ServiceManager : MonoBehaviour
     
     private GameManager GM;
     private Slider slider;
+    private ExternalCommunication EC;
     // Start is called before the first frame update
     void Awake()
     {
@@ -38,6 +40,7 @@ public class ServiceManager : MonoBehaviour
         slider.gameObject.SetActive(false);
         info = transform.GetChild(1).Find("Info").GetComponent<TMP_Text>();
         info.text = name + "\nCost: " + cost.ToString();
+        EC = GetComponent<ExternalCommunication>();
     }
 
     // Update is called once per frame
@@ -65,14 +68,7 @@ public class ServiceManager : MonoBehaviour
 
         if (!active && GM.donationValue >= cost)
         {
-            active = true;
-            slider.gameObject.SetActive(true);
-            transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = activeMat;
-            GM.SpendDono(cost);
-
-            info.text = name + "\nspeed" + cooldownTime.ToString() + "\nValue:" + value.ToString()
-                        + "\nCost:" + costToRun.ToString();
-            lastUsedTime = Time.time;
+            Buy();
         }
     }
 
@@ -99,5 +95,20 @@ public class ServiceManager : MonoBehaviour
         {
             StartCollection();
         }   
+    }
+
+    void Buy()
+    {
+        active = true;
+        EC.active = active;
+        slider.gameObject.SetActive(true);
+            
+        MeshRenderer MR = transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>();
+        MR.material = activeMat;
+            
+        GM.SpendDono(cost);
+        info.text = name + "\nspeed" + cooldownTime.ToString() + "\nValue:" + value.ToString()
+                    + "\nCost:" + costToRun.ToString();
+        lastUsedTime = Time.time;
     }
 }

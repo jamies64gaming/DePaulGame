@@ -28,8 +28,7 @@ public class StandController : MonoBehaviour
     
     private GameManager GM;
     private Slider slider;
-
-    private ManagerCommunication AutoClickCheck;
+    private ExternalCommunication EC;
     // Start is called before the first frame update
     void Awake()
     {
@@ -39,7 +38,7 @@ public class StandController : MonoBehaviour
         slider.gameObject.SetActive(false);
         info = transform.GetChild(1).Find("Info").GetComponent<TMP_Text>();
         info.text = name + "\nCost: " + cost.ToString();
-        AutoClickCheck = GetComponent<ManagerCommunication>();
+        EC = GetComponent<ExternalCommunication>();
     }
 
     // Update is called once per frame
@@ -67,13 +66,7 @@ public class StandController : MonoBehaviour
 
         if (!active && GM.donationValue >= cost)
         {
-            active = true;
-            slider.gameObject.SetActive(true);
-            transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = activeMat;
-            GM.SpendDono(cost);
-
-            info.text = name + "\nspeed" + cooldownTime.ToString() + "\nValue:" + value.ToString();
-            lastUsedTime = Time.time;
+            Buy();
         }
     }
 
@@ -101,8 +94,20 @@ public class StandController : MonoBehaviour
         }
         else if(!autoClick)
         {
-            if (AutoClickCheck.Active)
+            if (EC.AutoClickActive)
                 autoClick = true;
         }
+    }
+
+    void Buy()
+    {
+        active = true;
+        EC.active = active;
+        slider.gameObject.SetActive(true);
+        transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = activeMat;
+        GM.SpendDono(cost);
+
+        info.text = name + "\nspeed" + cooldownTime.ToString() + "\nValue:" + value.ToString();
+        lastUsedTime = Time.time;
     }
 }

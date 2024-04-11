@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 4293795543887432277}
   - component: {fileID: 6308136354945066334}
   - component: {fileID: 5269256875867078694}
+  - component: {fileID: 8876546185918184126}
   m_Layer: 0
   m_Name: Service
   m_TagString: Untagged
@@ -528,8 +529,22 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.6515598, y: 3.6605558, z: 1.627624}
+  m_Center: {x: 0.015898347, y: 1.3302779, z: -0.28663746}
+--- !u!114 &8876546185918184126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6424291422971821686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2e09a37103f4949803b863a5cfc1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AutoClickActive: 0
+  active: 0
 --- !u!1 &7297566346861044851
 GameObject:
   m_ObjectHideFlags: 0

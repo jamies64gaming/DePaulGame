@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4067741633449197450
+--- !u!114 &-4291468877986452157
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Depaul_Ground_Texture_2
+  m_Name: Depaul_Ground_Texture4
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -41,11 +41,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 1555d8113e2500247a4fbb274fa3f19b, type: 3}
+        m_Texture: {fileID: 2800000, guid: ef021605315e406498ae9be274a3b515, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 2965f6bde2abde545ad209da00efb30d, type: 3}
+        m_Texture: {fileID: 2800000, guid: b2a4917b0f106854b817b5e82e3bc051, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1555d8113e2500247a4fbb274fa3f19b, type: 3}
+        m_Texture: {fileID: 2800000, guid: ef021605315e406498ae9be274a3b515, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -73,11 +73,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: d070bd7c70713d849aaa2ae60fe7f5e0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2ae3ca4175b68d142af2e6ec85a203d0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: fbffde5b01d0346438ef3a2b635e62e7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2b32c001a56bd034180eb02ef0857e09, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:

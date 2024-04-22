@@ -66,7 +66,7 @@ public class ManagerController : MonoBehaviour
         active = true;
         EC.active = active;
         GM.SpendDono(cost);
-
+        transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = activeMat;
         info.text = name + "is active";
         activate();
     }

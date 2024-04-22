@@ -11,6 +11,7 @@ public class UI : MonoBehaviour
     void Start()
     {
         Anim = GetComponent<Animator>();
+        Toggle();
     }
 
     public void Toggle()

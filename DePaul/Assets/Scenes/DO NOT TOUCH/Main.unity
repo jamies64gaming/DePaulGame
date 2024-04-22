@@ -1787,11 +1787,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 521587573745947460, guid: 7a3892a1c3546eb44a10b5ec191e0743,
-        type: 3}
-      propertyPath: activeMat
-      value: 
-      objectReference: {fileID: 2100000, guid: e4e4a1144eb952c4e9676f6fd0e31100, type: 2}
     - target: {fileID: 2140117748236349353, guid: 7a3892a1c3546eb44a10b5ec191e0743,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1802,30 +1797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: basic stand
       objectReference: {fileID: 0}
-    - target: {fileID: 2808995300416051907, guid: 7a3892a1c3546eb44a10b5ec191e0743,
-        type: 3}
-      propertyPath: m_TagString
-      value: Bucket Stand
-      objectReference: {fileID: 0}
     - target: {fileID: 3317546430513481420, guid: 7a3892a1c3546eb44a10b5ec191e0743,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3936562134417449753, guid: 7a3892a1c3546eb44a10b5ec191e0743,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3936562134417449753, guid: 7a3892a1c3546eb44a10b5ec191e0743,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3936562134417449753, guid: 7a3892a1c3546eb44a10b5ec191e0743,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5533991139520982506, guid: 7a3892a1c3546eb44a10b5ec191e0743,
         type: 3}
@@ -1877,11 +1852,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9130280852523002922, guid: 7a3892a1c3546eb44a10b5ec191e0743,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e4ccaf1627483de4695d9efe921f7685, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -17,28 +18,44 @@ public class StandController : MonoBehaviour
     public float cooldownTime = 5f;
     private float lastUsedTime = 0;
 
-    private TMP_Text info;
-
     [Header("Activate Conditions")]
     public bool active = false;
     public Material activeMat;
 
     [Header("Local")] 
     public bool autoClick = false;
+
+    [SerializeField] private TMP_Text costT;
+    [SerializeField] private TMP_Text incomeT;
+    [SerializeField] private TMP_Text timeT;
+    [SerializeField] private TMP_Text info;
+    [SerializeField] private GameObject buyMenu;
+    [SerializeField] private GameObject activeMenu;
+    [SerializeField] private CanvasGroup _canvasGroup;
+    
+    public Slider slider;
+
+    [Header("Audio")] 
+    [SerializeField] private AudioSource buyAudioClip;
+    public AudioSource getMoneyAudioClip;
+    [SerializeField] private AudioSource interactAudioClip;
+    [SerializeField] private AudioSource rejectAudioClip;
+    
     
     private GameManager GM;
-    private Slider slider;
+    private Camera _camera;
+    
     private ExternalCommunication EC;
     // Start is called before the first frame update
     void Awake()
     {
+        _camera = Camera.main;
         GM = FindObjectOfType<GameManager>();
-        slider = transform.Find("Canvas").Find("Slider").GetComponent<Slider>();
         lastUsedTime = Time.time - cooldownTime;
         slider.gameObject.SetActive(false);
-        info = transform.GetChild(1).Find("Info").GetComponent<TMP_Text>();
-        info.text = name + "\nCost: " + cost.ToString();
         EC = GetComponent<ExternalCommunication>();
+        
+        SetUpText();
     }
 
     // Update is called once per frame
@@ -50,8 +67,26 @@ public class StandController : MonoBehaviour
             UpdateSlider();
             AutoClick();
         }
+        
+        Vector3 pos = _camera.WorldToScreenPoint(transform.position);
+        pos.y += 75;
+        info.transform.position = pos + new Vector3(0,50,0);
+        buyMenu.transform.position = pos;
+        activeMenu.transform.position = pos;
+        
+        
     }
-    
+
+    void SetUpText()
+    {
+        info.text = gameObject.name;
+        costT.text = cost.ToString();
+        incomeT.text = value.ToString();
+        timeT.text = cooldownTime.ToString();
+        _canvasGroup.alpha = .1f;
+        buyMenu.transform.localScale = new Vector3(0,0,0);
+        activeMenu.transform.localScale = new Vector3(0,0,0);
+    }
     void CanClick()
     {
         if (Time.time > lastUsedTime + cooldownTime)
@@ -64,16 +99,37 @@ public class StandController : MonoBehaviour
         if (clickable && active)
             StartCollection();
 
-        if (!active && GM.donationValue >= cost)
+        else if (!active && GM.donationValue >= cost)
         {
             Buy();
         }
+        else
+        {
+            PlayAudioClip("reject");
+        }
+    }
+    
+
+    private void OnMouseEnter()
+    {
+        _canvasGroup.alpha = 1;
+        buyMenu.transform.localScale = new Vector3(1.59f,1.59f,1.59f);
+        activeMenu.transform.localScale = new Vector3(1.59f,1.59f,1.59f);
+        PlayAudioClip("interact");
+    }
+
+    private void OnMouseExit()
+    {
+        _canvasGroup.alpha = .1f;
+        buyMenu.transform.localScale = new Vector3(0,0,0);
+        activeMenu.transform.localScale = new Vector3(0,0,0);
     }
 
     void StartCollection()
     {
         lastUsedTime = Time.time;
         GM.AddDono(value);
+        PlayAudioClip("collect");
     }
 
     void UpdateSlider()
@@ -106,8 +162,34 @@ public class StandController : MonoBehaviour
         slider.gameObject.SetActive(true);
         transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = activeMat;
         GM.SpendDono(cost);
-
-        info.text = name + "\nspeed" + cooldownTime.ToString() + "\nValue:" + value.ToString();
+        
+        buyMenu.SetActive(false);
+        activeMenu.SetActive(true);
         lastUsedTime = Time.time;
+        
+        PlayAudioClip("buy");
+    }
+
+    void PlayAudioClip(string reason)
+    {
+
+        switch (reason)
+        {
+            case "buy":
+                buyAudioClip.Play();
+                break;
+            case "collect":
+                getMoneyAudioClip.Play();
+                break;
+            
+            case "reject":
+                rejectAudioClip.Play();
+                break;
+            
+            case "interact":
+                interactAudioClip.Play();
+                break;
+            
+        }
     }
 }

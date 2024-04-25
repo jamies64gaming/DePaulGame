@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ServiceManager : MonoBehaviour
@@ -19,8 +20,6 @@ public class ServiceManager : MonoBehaviour
     public float cooldownTime = 5f;
     private float lastUsedTime = 0;
 
-    private TMP_Text info;
-
     [Header("Activate Conditions")]
     public bool active = false;
     public Material activeMat;
@@ -28,19 +27,36 @@ public class ServiceManager : MonoBehaviour
     [Header("Local")] 
     public bool autoClick = false;
     
+    [SerializeField] private TMP_Text costT;
+    [FormerlySerializedAs("incomeT")] [SerializeField] private TMP_Text costToRunT;
+    [SerializeField] private TMP_Text timeT;
+    [SerializeField] private TMP_Text info;
+    [SerializeField] private TMP_Text peopleT;
+    [SerializeField] private GameObject buyMenu;
+    [SerializeField] private GameObject activeMenu;
+    [SerializeField] private CanvasGroup _canvasGroup;
+    [SerializeField] private Slider slider;
+    
+    
+    [Header("Audio")] 
+    [SerializeField] private AudioSource buyAudioClip;
+    [SerializeField] private AudioSource spendMoneyAudioSource;
+    [SerializeField] private AudioSource interactAudioClip;
+    [SerializeField] private AudioSource rejectAudioClip;
+    
+    
     private GameManager GM;
-    private Slider slider;
+    private Camera _camera;
     private ExternalCommunication EC;
     // Start is called before the first frame update
     void Awake()
     {
+        _camera = Camera.main;
         GM = FindObjectOfType<GameManager>();
-        slider = transform.Find("Canvas").Find("Slider").GetComponent<Slider>();
         lastUsedTime = Time.time - cooldownTime;
-        slider.gameObject.SetActive(false);
-        info = transform.GetChild(1).Find("Info").GetComponent<TMP_Text>();
-        info.text = name + "\nCost: " + cost.ToString();
         EC = GetComponent<ExternalCommunication>();
+        
+        SetUpText();
     }
 
     // Update is called once per frame
@@ -52,6 +68,12 @@ public class ServiceManager : MonoBehaviour
             UpdateSlider();
             AutoClick();
         }
+        
+        Vector3 pos = _camera.WorldToScreenPoint(transform.position);
+        pos.y += 75;
+        info.transform.position = pos + new Vector3(0,50,0);
+        buyMenu.transform.position = pos;
+        activeMenu.transform.position = pos;
     }
     
     void CanClick()
@@ -61,14 +83,31 @@ public class ServiceManager : MonoBehaviour
         else
             clickable = false;
     }
+    
+    void SetUpText()
+    {
+        info.text = gameObject.name;
+        costT.text = cost.ToString();
+        costToRunT.text = costToRun.ToString();
+        timeT.text = cooldownTime.ToString();
+        peopleT.text = value.ToString();
+        _canvasGroup.alpha = .1f;
+        buyMenu.transform.localScale = new Vector3(0,0,0);
+        activeMenu.transform.localScale = new Vector3(0,0,0);
+    }
+    
     void OnMouseDown()
     {
         if (clickable && active)
             StartCollection();
 
-        if (!active && GM.donationValue >= cost)
+        else if (!active && GM.donationValue >= cost)
         {
             Buy();
+        }
+        else
+        {
+            PlayAudioClip("reject");
         }
     }
 
@@ -77,6 +116,7 @@ public class ServiceManager : MonoBehaviour
         lastUsedTime = Time.time;
         GM.SpendDono(costToRun);
         GM.AddImpact(value);
+        PlayAudioClip("collect");
     }
 
     void UpdateSlider()
@@ -96,19 +136,59 @@ public class ServiceManager : MonoBehaviour
             StartCollection();
         }   
     }
+    
+    private void OnMouseEnter()
+    {
+        _canvasGroup.alpha = 1;
+        buyMenu.transform.localScale = new Vector3(1.59f,1.59f,1.59f);
+        activeMenu.transform.localScale = new Vector3(1.59f,1.59f,1.59f);
+        
+        PlayAudioClip("interact");
+    }
+
+    private void OnMouseExit()
+    {
+        _canvasGroup.alpha = .1f;
+        buyMenu.transform.localScale = new Vector3(0,0,0);
+        activeMenu.transform.localScale = new Vector3(0,0,0);
+    }
 
     void Buy()
     {
         active = true;
         EC.active = active;
-        slider.gameObject.SetActive(true);
             
         MeshRenderer MR = transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>();
         MR.material = activeMat;
-            
+        
+        buyMenu.SetActive(false);
+        activeMenu.SetActive(true);
         GM.SpendDono(cost);
-        info.text = name + "\nspeed" + cooldownTime.ToString() + "\nValue:" + value.ToString()
-                    + "\nCost:" + costToRun.ToString();
         lastUsedTime = Time.time;
+        
+        PlayAudioClip("buy");
+    }
+
+    void PlayAudioClip(string reason)
+    {
+
+        switch (reason)
+        {
+            case "buy":
+                buyAudioClip.Play();
+                break;
+            case "collect":
+                spendMoneyAudioSource.Play();
+                break;
+
+            case "reject":
+                rejectAudioClip.Play();
+                break;
+
+            case "interact":
+                interactAudioClip.Play();
+                break;
+
+        }
     }
 }

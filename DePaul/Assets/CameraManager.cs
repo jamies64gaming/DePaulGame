@@ -18,10 +18,10 @@ public class CameraManager : MonoBehaviour
 
     public int stage = 0;
 
-    private float currentZoom;
-    private float targetZoom;
+    private float _currentZoom;
+    private float _targetZoom;
 
-    private float sinTime;
+    private float _sinTime;
     
     // Update is called once per frame
     void UpdateCamera()
@@ -35,12 +35,12 @@ public class CameraManager : MonoBehaviour
 
     private void Update()
     {
-        if (zoomLevel != targetZoom)
+        if (!Mathf.Approximately(zoomLevel,_targetZoom))
         {
-            sinTime += Time.deltaTime * speed;
-            sinTime = Mathf.Clamp(sinTime, 0, Mathf.PI);
-            float t = evaluate(sinTime);
-            zoomLevel = Mathf.Lerp(currentZoom, targetZoom, t);
+            _sinTime += Time.deltaTime * speed;
+            _sinTime = Mathf.Clamp(_sinTime, 0, Mathf.PI);
+            float t = Evaluate(_sinTime);
+            zoomLevel = Mathf.Lerp(_currentZoom, _targetZoom, t);
             UpdateCamera();
         }
         
@@ -57,14 +57,14 @@ public class CameraManager : MonoBehaviour
         else
         {
             stage = stg;
-            sinTime = 0;
-            currentZoom = targetZoom;
-            targetZoom = zoomStages[stage];
+            _sinTime = 0;
+            _currentZoom = _targetZoom;
+            _targetZoom = zoomStages[stage];
         }
 
     }
 
-    public float evaluate(float x)
+    public float Evaluate(float x)
     {
         return 0.5f * Mathf.Sin(x - Mathf.PI / 2f) + .5f;
     }

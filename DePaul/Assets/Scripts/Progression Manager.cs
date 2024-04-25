@@ -6,17 +6,17 @@ using UnityEngine.Serialization;
 public class ProgressionManager : MonoBehaviour
 {
     [Header("Each Stage is a list of\nservices / stands that need to be\nbought in order to progress")]
-    public PointList ListOfStages = new PointList();
+    public PointList listOfStages = new PointList();
 
     public int stage;
     public bool done = false;
-    private CameraManager cameraM;
+    private CameraManager _cameraM;
 
     public ExternalCommunication[] externalCommunications;
     // Start is called before the first frame update
     void Start()
     {
-        cameraM = FindObjectOfType<CameraManager>();
+        _cameraM = FindObjectOfType<CameraManager>();
         stage = -1;
 
         ChangeStage();
@@ -25,7 +25,7 @@ public class ProgressionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stage >= ListOfStages.Stage.Count || done)
+        if (stage >= listOfStages.Stage.Count || done)
             return;
         
         foreach (ExternalCommunication EC in externalCommunications)
@@ -40,12 +40,12 @@ public class ProgressionManager : MonoBehaviour
     void ChangeStage()
     {
         stage ++;
-        cameraM.SwitchStage(stage);
-        if (stage >= ListOfStages.Stage.Count)
+        _cameraM.SwitchStage(stage);
+        if (stage >= listOfStages.Stage.Count)
         {
             done = true;
             return;
         }
-        externalCommunications = ListOfStages.Stage[stage].activeObjects;
+        externalCommunications = listOfStages.Stage[stage].activeObjects;
     }
 }

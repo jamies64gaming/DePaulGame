@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    private Animator Anim;
+    private Animator _anim;
 
-    private bool active = false;
+    private bool _active = false;
     // Start is called before the first frame update
     void Start()
     {
-        Anim = GetComponent<Animator>();
+        _anim = GetComponent<Animator>();
         Toggle();
     }
 
     public void Toggle()
     {
-        if (active)
+        if (_active)
         {
-            active = false;
-            Anim.SetBool("SlideIn",false);
+            _active = false;
+            _anim.SetBool("SlideIn",false);
         }
         else
         {
-            active = true;
-            Anim.SetBool("SlideIn",true);
+            _active = true;
+            _anim.SetBool("SlideIn",true);
         }
     }
     // Update is called once per frame

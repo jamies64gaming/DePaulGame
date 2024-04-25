@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1310840-d573-43f1-8497-aa36edbc6d15" name="Changes" comment="" />
+    <list default="true" id="f1310840-d573-43f1-8497-aa36edbc6d15" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DePaul/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DePaul/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PeopleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PeopleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DO NOT TOUCH/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DO NOT TOUCH/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DO NOT TOUCH/Main/NavMesh-Plane 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DO NOT TOUCH/Main/NavMesh-Plane 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/MapBig.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/MapBig.jpg.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +26,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Progress Capture/ProgList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Progression Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sevices/Service Manager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -110,6 +117,7 @@
       <workItem from="1713781068809" duration="192000" />
       <workItem from="1713961496820" duration="18596000" />
       <workItem from="1713991576759" duration="686000" />
+      <workItem from="1714045817887" duration="1346000" />
     </task>
     <servers />
   </component>

@@ -23,6 +23,7 @@ mono_crash.*.json
 /DePaul/build/
 /DePaul/Builds/
 /DePaul/Packages/
+/DePaul/UserSettings/
 Log
 Logs
 Klak

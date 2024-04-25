@@ -17,12 +17,12 @@ mono_crash.*.json
 
 # Unity Gitignore
 
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[P]ackages/
+/DePaul/Library/
+/DePaul/Temp/
+/DePaul/obj/
+/DePaul/build/
+/DePaul/Builds/
+/DePaul/Packages/
 Log
 Logs
 Klak

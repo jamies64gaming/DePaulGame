@@ -55,6 +55,7 @@ public class NarrativeController : MonoBehaviour
         if (stage >= narList.Stage.Count)
         {
             done = true;
+            GetComponent<StoryManager>().storiesActive = true;
             return;
         }
         externalCommunications = narList.Stage[stage].activeObjects;
@@ -68,13 +69,16 @@ public class NarrativeController : MonoBehaviour
 
     public void NextLine()
     {
+        if(done)
+            return;
         if (index >= maxLines)
         {
             return;
         }
         if (nextButtonText.text == "Close")
         {
-            DeactivateText();
+            //DeactivateText();
+            textBox.text = "";
             return;
         }
         index++;
@@ -85,6 +89,8 @@ public class NarrativeController : MonoBehaviour
 
     public void PreviousLine()
     {
+        if(done)
+            return;
         index--;
         textBox.text = text[index];
         CheckNextButton();

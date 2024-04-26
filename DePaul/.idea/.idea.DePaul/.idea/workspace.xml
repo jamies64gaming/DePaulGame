@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f1310840-d573-43f1-8497-aa36edbc6d15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DePaul/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DePaul/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Services/Service.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Services/Service.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/BuildingCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/BuildingCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PeopleCavas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PeopleCavas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/DO NOT TOUCH/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DO NOT TOUCH/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Manager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Narrative/NarrativeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Narrative/NarrativeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sevices/Service Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sevices/Service Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIPanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIPanelController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,13 +22,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/40/48a9b238/Camera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Done.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PeopleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ExternalCommunication.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Progress Capture/NarCap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Progress Capture/ProgList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Progression Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sevices/Service Manager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StoryManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -122,7 +123,7 @@
       <workItem from="1713961496820" duration="18596000" />
       <workItem from="1713991576759" duration="686000" />
       <workItem from="1714045817887" duration="1346000" />
-      <workItem from="1714147482388" duration="9317000" />
+      <workItem from="1714147482388" duration="15148000" />
     </task>
     <servers />
   </component>

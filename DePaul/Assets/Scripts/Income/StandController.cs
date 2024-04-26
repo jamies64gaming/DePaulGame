@@ -31,6 +31,7 @@ public class StandController : MonoBehaviour
     [SerializeField] private TMP_Text info;
     [SerializeField] private GameObject buyMenu;
     [SerializeField] private GameObject activeMenu;
+    [SerializeField] private GameObject bubbleMenu;
     [SerializeField] private CanvasGroup _canvasGroup;
     
     public Slider slider;
@@ -44,7 +45,7 @@ public class StandController : MonoBehaviour
     
     private GameManager GM;
     private Camera _camera;
-    
+    private bool UIActive = false;
     private ExternalCommunication EC;
     // Start is called before the first frame update
     void Awake()
@@ -67,25 +68,48 @@ public class StandController : MonoBehaviour
             UpdateSlider();
             AutoClick();
         }
-        
-        Vector3 pos = _camera.WorldToScreenPoint(transform.position);
-        pos.y += 75;
-        info.transform.position = pos + new Vector3(0,50,0);
-        buyMenu.transform.position = pos;
-        activeMenu.transform.position = pos;
-        
+        if (UIActive)
+            UIPostion();
         
     }
 
+    void UIPostion()
+    {
+        GameObject menu;
+        if (buyMenu.activeSelf)
+            menu = buyMenu;
+        else
+            menu = activeMenu;
+        
+        Vector3 pos = _camera.WorldToScreenPoint(transform.position);
+        pos.y += 75;
+        if (pos.y >= 400)
+        {
+            pos.y -= 200;
+            bubbleMenu.transform.rotation =  Quaternion.Euler(new Vector3(0,0,180));
+            bubbleMenu.transform.position = pos + new Vector3(0,40,0);
+        }
+        else
+        {
+            bubbleMenu.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            bubbleMenu.transform.position = pos;
+        }
+
+        info.transform.position = pos + new Vector3(0, 50, 0);
+        menu.transform.position = pos;
+        
+    }
     void SetUpText()
     {
         info.text = gameObject.name;
         costT.text = cost.ToString();
         incomeT.text = value.ToString();
         timeT.text = cooldownTime.ToString();
-        _canvasGroup.alpha = .1f;
+        _canvasGroup.alpha = 0f;
         buyMenu.transform.localScale = new Vector3(0,0,0);
         activeMenu.transform.localScale = new Vector3(0,0,0);
+        bubbleMenu.transform.localScale = new Vector3(0,0,0);
+        UIActive = false;
     }
     void CanClick()
     {
@@ -115,14 +139,18 @@ public class StandController : MonoBehaviour
         _canvasGroup.alpha = 1;
         buyMenu.transform.localScale = new Vector3(1.59f,1.59f,1.59f);
         activeMenu.transform.localScale = new Vector3(1.59f,1.59f,1.59f);
+        bubbleMenu.transform.localScale = new Vector3(1.59f,1.59f,1.59f);
+        UIActive = true;
         PlayAudioClip("interact");
     }
 
     private void OnMouseExit()
     {
-        _canvasGroup.alpha = .1f;
+        _canvasGroup.alpha = 0f;
         buyMenu.transform.localScale = new Vector3(0,0,0);
         activeMenu.transform.localScale = new Vector3(0,0,0);
+        bubbleMenu.transform.localScale = new Vector3(0,0,0);
+        UIActive = false;
     }
 
     void StartCollection()
@@ -192,4 +220,5 @@ public class StandController : MonoBehaviour
             
         }
     }
+    
 }

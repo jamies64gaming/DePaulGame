@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f1310840-d573-43f1-8497-aa36edbc6d15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DePaul/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DePaul/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PeopleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PeopleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Income/Stand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Income/Stand.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Services/Service.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Services/Service.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/BuildingCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/BuildingCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PeopleCavas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PeopleCavas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/DO NOT TOUCH/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DO NOT TOUCH/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DO NOT TOUCH/Main/NavMesh-Plane 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DO NOT TOUCH/Main/NavMesh-Plane 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/MapBig.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/MapBig.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Income/StandController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Income/StandController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sevices/Service Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sevices/Service Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +123,7 @@
       <workItem from="1713961496820" duration="18596000" />
       <workItem from="1713991576759" duration="686000" />
       <workItem from="1714045817887" duration="1346000" />
+      <workItem from="1714147482388" duration="4824000" />
     </task>
     <servers />
   </component>

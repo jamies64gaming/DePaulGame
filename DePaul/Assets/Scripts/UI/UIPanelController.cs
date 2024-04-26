@@ -19,12 +19,12 @@ public class UI : MonoBehaviour
         if (_active)
         {
             _active = false;
-            _anim.SetBool("SlideIn",false);
+            _anim.SetBool("SlideIn",true);
         }
         else
         {
             _active = true;
-            _anim.SetBool("SlideIn",true);
+            _anim.SetBool("SlideIn",false);
         }
     }
     // Update is called once per frame

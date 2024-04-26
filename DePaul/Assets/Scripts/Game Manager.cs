@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private TMP_Text donationTextBox;
     [SerializeField] private TMP_Text impactTextBox;
+
+    [SerializeField] private GameObject Meeple;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,5 +45,9 @@ public class GameManager : MonoBehaviour
     public void AddImpact(int value)
     {
         impactValue += value;
+        for (int i = 0; i <= value; i++)
+        {
+            Instantiate(Meeple);
+        }
     }
 }

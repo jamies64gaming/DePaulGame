@@ -17,6 +17,13 @@ public class NarrativeController : MonoBehaviour
 
     public Button nextButton;
     public Button prevButton;
+
+    public NarList narList = new NarList();
+
+    public int stage = 0;
+    public bool done = false;
+    public int maxLines = 3;
+    public ExternalCommunication[] externalCommunications;
     
     // Start is called before the first frame update
     void Start()
@@ -25,16 +32,46 @@ public class NarrativeController : MonoBehaviour
         nextButtonText.text = "Next";
         prevButtonText.text = "Previous";
         prevButton.interactable = false;
+        stage = -1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (stage >= narList.Stage.Count || done)
+            return;
         
+        foreach (ExternalCommunication EC in externalCommunications)
+        {
+            if(!EC.active)
+                return;
+        }
+        ChangeStage();
+    }
+    
+    void ChangeStage()
+    {
+        stage ++;
+        if (stage >= narList.Stage.Count)
+        {
+            done = true;
+            return;
+        }
+        externalCommunications = narList.Stage[stage].activeObjects;
+        maxLines = narList.Stage[stage].Lines;
+        if (maxLines == 2)
+        {
+            return;
+        }
+        NextLine();
     }
 
     public void NextLine()
     {
+        if (index >= maxLines)
+        {
+            return;
+        }
         if (nextButtonText.text == "Close")
         {
             DeactivateText();

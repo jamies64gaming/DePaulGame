@@ -88,9 +88,9 @@ public class ServiceManager : MonoBehaviour
         pos.y += 75;
         if (pos.y >= 400)
         {
-            pos.y -= 200;
+            pos.y -= 210;
             bubbleMenu.transform.rotation =  Quaternion.Euler(new Vector3(0,0,180));
-            bubbleMenu.transform.position = pos + new Vector3(0,40,0);
+            bubbleMenu.transform.position = pos + new Vector3(0,30,0);
         }
         else
         {

@@ -64,6 +64,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/build/winbuild\DePaul.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="F:\Game Design\Unity projects\DePaul Git\DePaulGame\DePaul\build\winbuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;F:\Game Design\Unity projects\DePaul Git\DePaulGame\DePaul&quot; -debugCodeOptimization" />
@@ -123,7 +131,7 @@
       <workItem from="1713961496820" duration="18596000" />
       <workItem from="1713991576759" duration="686000" />
       <workItem from="1714045817887" duration="1346000" />
-      <workItem from="1714147482388" duration="15148000" />
+      <workItem from="1714147482388" duration="15742000" />
     </task>
     <servers />
   </component>

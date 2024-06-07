@@ -6,9 +6,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    
-    
-    
     public int donationValue = 0;
     public string donationPreText = "";
     
@@ -19,10 +16,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text impactTextBox;
 
     [SerializeField] private GameObject Meeple;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -30,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         donationTextBox.text = donationPreText + " " + donationValue.ToString();
         impactTextBox.text = impactPreText + " " + impactValue.ToString();
+        
     }
 
     public void AddDono(int value)

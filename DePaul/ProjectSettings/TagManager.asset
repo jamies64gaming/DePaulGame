@@ -8,6 +8,7 @@ TagManager:
   - Audio
   - Selectable
   - Advert
+  - Manager
   layers:
   - Default
   - TransparentFX
